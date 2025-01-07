@@ -14,6 +14,7 @@ onMounted(() => {
         checkedDarkTheme.value = true
         return
     }
+
     checkedDarkTheme.value = false
 })
 
