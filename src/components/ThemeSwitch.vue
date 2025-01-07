@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { onMounted, ref, watch, } from 'vue';
 
+const LOCAL_STORAGE_THEME_KEY: string = "theme"
+
 const checkedDarkTheme = ref(false)
 
 onMounted(() => {
     checkedDarkTheme.value = document.documentElement.classList.contains("dark")
-    const theme: string | null = localStorage.getItem("theme")
+    const theme: string | null = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
     if (theme === null) {
         return
     }
@@ -20,7 +22,7 @@ onMounted(() => {
 
 watch(checkedDarkTheme, () => {
     document.documentElement.classList.toggle("dark", checkedDarkTheme.value)
-    localStorage.setItem("theme", checkedDarkTheme.value ? "dark" : "light")
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, checkedDarkTheme.value ? "dark" : "light")
 })
 
 </script>
