@@ -1,7 +1,7 @@
 # recipe-app-frontend
 
-This repository contains only first part of the 2 parts of my demo full-stack recipe app. 
+This repository contains frontend (made in Vue.js) to my back-end [Go project](https://github.com/danielbukowski/recipe-app-backend).
 
-## Why?
+## Reason
 
-I'm creating this project with motivation to learn new things and summarize what I've learned for the past 6 months.
+I'm creating this project with motivation to learn new things and summarize what I've learned for the past 4 months.
